@@ -1,0 +1,35 @@
+body {
+    font: 15px arial;
+    background: white;
+    color: black;
+}
+
+header, nav, aside {
+    text-align: center;
+}
+
+nav, footer {
+    margin: 10px 0 10px 0;
+}
+
+#page {
+    display: flex;
+    width: 100%;
+    border: lightgray solid 1px;
+}
+
+aside {
+    flex-shrink: 0;
+    min-width: 270px;
+    background: black;
+    color: white;
+}
+
+#articles {
+    flex-grow: 1;
+    margin: 10px;
+}
+
+footer {
+    text-align: right;
+}
