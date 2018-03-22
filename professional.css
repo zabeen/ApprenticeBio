@@ -8,6 +8,10 @@ a {
     color: crimson;
 }
 
+ul {
+    list-style-type: square;
+}
+
 header, nav, aside {
     text-align: center;
 }
@@ -38,7 +42,6 @@ aside {
 
 aside ul {
     padding-left: 15px;
-    list-style-type: square;
 }
 
 #profile-pic {
@@ -51,6 +54,10 @@ aside ul {
 #articles {
     flex-grow: 1;
     margin: 15px 15px 15px 20px;
+}
+
+#articles h2, ul, ol {
+    margin: 15px 0 0 0;
 }
 
 footer {
