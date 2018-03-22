@@ -4,12 +4,21 @@ body {
     color: black;
 }
 
+a {
+    color: crimson;
+}
+
 header, nav, aside {
     text-align: center;
 }
 
 nav, footer {
-    margin: 10px 0 10px 0;
+    margin: 15px 0 15px 0;
+}
+
+nav a {
+    padding: 0 15px 0 15px;
+    font-size: 1.25em;
 }
 
 #page {
@@ -41,7 +50,7 @@ aside ul {
 
 #articles {
     flex-grow: 1;
-    margin: 15px;
+    margin: 15px 15px 15px 20px;
 }
 
 footer {
