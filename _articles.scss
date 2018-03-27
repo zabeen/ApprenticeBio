@@ -4,6 +4,14 @@
     flex-flow: row wrap;
     margin: 15px 15px 15px 20px;
 
+    article:nth-child(even){
+        background-color: $article-bg-color-even;
+    }
+
+    article:nth-child(odd){
+        background-color: $article-bg-color-odd;
+    }
+
     article {
         border: 1px solid $border-color;
         margin: 5px;

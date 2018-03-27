@@ -1,13 +1,16 @@
-$base-color: #465f5c;
+$base-color: #3e5763;
 
 $body-color: $base-color;
 $body-bg-color: white;
 
 $header-color: lighten($base-color, 20%);
 
-$a-color: adjust-hue(saturate($base-color, 75%), 45deg);
+$a-color: adjust-hue(saturate($base-color, 90%), 45deg);
 
 $aside-color: white;
-$aside-bg-color: darken($base-color, 20%);
+$aside-bg-color: darken($base-color, 10%);
 
-$border-color: lighten(desaturate($base-color,50%), 50%);
+$border-color: lighten(desaturate($base-color,20%), 50%);
+
+$article-bg-color-even: lighten($border-color, 10%);
+$article-bg-color-odd: lighten($border-color, 20%);
