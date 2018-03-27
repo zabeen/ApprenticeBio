@@ -1,0 +1,13 @@
+$base-color: #465f5c;
+
+$body-color: $base-color;
+$body-bg-color: white;
+
+$header-color: lighten($base-color, 20%);
+
+$a-color: adjust-hue(saturate($base-color, 75%), 45deg);
+
+$aside-color: white;
+$aside-bg-color: darken($base-color, 20%);
+
+$border-color: lighten(desaturate($base-color,50%), 50%);

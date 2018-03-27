@@ -1,11 +1,17 @@
+@import 'color-vars';
+
 body {
     font: 15px arial;
-    background: white;
-    color: black;
+    background: $body-bg-color;
+    color: $body-color;
+}
+
+h1, h2 {
+    color: $header-color;
 }
 
 a {
-    color: crimson;
+    color: $a-color;
 }
 
 ul {
@@ -28,15 +34,15 @@ nav a {
 #page {
     display: flex;
     width: 100%;
-    border: lightgray solid 1px;
+    border: $border-color solid 1px;
 }
 
 aside {
     flex-shrink: 0;
     min-width: 270px;
     padding: 10px;
-    background: black;
-    color: white;
+    background: $aside-bg-color;
+    color: $aside-color;
     text-align: left;
 }
 
@@ -48,17 +54,10 @@ aside ul {
     margin: 5px;
     padding: 5px;
     text-align: center;
-    border: darkgray solid 1px;
+    border: $border-color solid 1px;
 }
 
-#articles {
-    flex-grow: 1;
-    margin: 15px 15px 15px 20px;
-}
-
-#articles h2, ul, ol {
-    margin: 15px 0 0 0;
-}
+@import 'articles';
 
 footer {
     text-align: right;
