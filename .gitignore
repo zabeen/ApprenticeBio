@@ -3,6 +3,10 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+# Built CSS files
+*.css
+*.css.map
+
 # Visual Studio Code Workspace
 *.code-workspace
 
