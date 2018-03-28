@@ -1,0 +1,19 @@
+aside {
+    flex-shrink: 0;
+    min-width: 270px;
+    padding: 10px;
+    background: $aside-bg-color;
+    color: $aside-color;
+    text-align: left;
+
+    ul {
+        padding-left: 15px;
+    }
+
+    #profile-pic {
+        margin: 5px;
+        padding: 5px;
+        text-align: center;
+        border: $border-color solid 1px;
+    }
+}

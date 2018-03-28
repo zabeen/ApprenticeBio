@@ -1,0 +1,17 @@
+body {
+    font: 15px arial;
+    background: $body-bg-color;
+    color: $body-color;
+}
+
+h1, h2 {
+    color: $header-color;
+}
+
+a {
+    color: $a-color;
+}
+
+ul {
+    list-style-type: square;
+}
