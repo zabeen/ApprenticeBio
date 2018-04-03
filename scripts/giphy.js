@@ -1,4 +1,4 @@
-const GIF_LIMIT = "10";
+const GIF_LIMIT = 10;
 const API_KEY = "apiKey=CFlZlBzN15Wj9vrQg73KT6RuLydG2vvV";
 
 const URL = "https://api.giphy.com/v1";
@@ -15,7 +15,7 @@ function loadPage(){
 
 function writeWelcome(){
     var para = document.createElement('p');
-    para.textContent = "The " + GIF_LIMIT + " latest GIFs trending on Giphy."
+    para.textContent = "The top " + GIF_LIMIT + " GIFs trending on Giphy."
     mainSection.appendChild(para);
 }
 
