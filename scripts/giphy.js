@@ -40,18 +40,17 @@ function getTrendingGifs() {
 }
 
 function addGifImg(imageUrl, caption) {
-    var article = document.createElement('article');
-    var figure = document.createElement('figure');
-
     var img = document.createElement('img');
     img.src = imageUrl;
     
     var figCaption = document.createElement('figcaption');
     figCaption.textContent = caption; 
 
+    var figure = document.createElement('figure');
     figure.appendChild(img);
     figure.appendChild(figCaption);
 
+    var article = document.createElement('article');
     article.appendChild(figure);
     mainSection.querySelector('#gif-articles').appendChild(article);
 }
