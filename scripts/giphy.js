@@ -16,7 +16,7 @@ function loadPage(){
 function writeWelcome(){
     var para = document.createElement('p');
     para.textContent = "The top " + GIF_LIMIT + " GIFs trending on Giphy."
-    mainSection.appendChild(para);
+    mainSection.querySelector('#gif-intro').appendChild(para);
 }
 
 function getTrendingGifs() {
@@ -53,7 +53,7 @@ function addGifImg(imageUrl, caption) {
     figure.appendChild(figCaption);
 
     article.appendChild(figure);
-    mainSection.appendChild(article);
+    mainSection.querySelector('#gif-articles').appendChild(article);
 }
 
 window.onload = loadPage();

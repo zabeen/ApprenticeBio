@@ -1,0 +1,17 @@
+@import 'size-vars';
+
+body {
+    font: 15px arial;
+    background: white;
+    color: black;
+    text-align: center;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    background-color:lightgray;
+}
+
+@import 'gif-articles';

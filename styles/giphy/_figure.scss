@@ -1,0 +1,16 @@
+figure {
+    padding: 0px;
+    margin: 0px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+
+    img {
+        width: $img-width;
+    }
+    
+    figcaption {
+        color: white;
+    }
+}
+
