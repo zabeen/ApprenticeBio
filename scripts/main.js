@@ -4,6 +4,7 @@
 
 var monthSelector = document.querySelector('#select-month');
 var daySelector = document.querySelector('#select-day');
+var happyImage = document.createElement('img');
 
 var months = {
     "Select Month": 0,
@@ -22,23 +23,55 @@ var months = {
 }
 
 function setUpBirthdayCounter() {
+    setUpBirthdayImage();
+    setUpMonthSelector();
+    setUpDaySelector();
+}
+
+function setUpBirthdayImage() {
+    happyImage.id = '#happy-img';
+    happyImage.src = 'img/happy-things.jpg';
+    happyImage.alt = 'Two yellow stuffed-toys with happy expressions, sat side-by-side on a wooden bench.';
+}
+
+function setUpMonthSelector() {
     var populateAtt = document.createAttribute('onchange');
     populateAtt.value = 'populateDaySelector();';
     monthSelector.setAttributeNode(populateAtt);
 
     populateMonthSelector();
+}
 
+function setUpDaySelector() {
     var calculateAtt = document.createAttribute('onchange');
     calculateAtt.value = 'displayDaysTillBirthday();';
     daySelector.setAttributeNode(calculateAtt);
+}
+
+function resetAnswer() {
+    displayAnswer('');
+    addRemoveBirthdayImage(false);
 }
 
 function displayAnswer(text) {
     document.querySelector('#answer').textContent = text;
 }
 
+function addRemoveBirthdayImage(isVisible) {
+    var article = document.querySelector('#birthday-countdown');
+
+    if(isVisible)
+    {
+        article.appendChild(happyImage);
+    }
+    else if (article.contains(happyImage))
+    {
+        article.removeChild(happyImage);
+    }
+}
+
 function populateMonthSelector() {
-    displayAnswer('');
+    resetAnswer();
 
     for(var month in months) {
         var opt = document.createElement('option');
@@ -49,7 +82,7 @@ function populateMonthSelector() {
 }
 
 function populateDaySelector() {
-    displayAnswer('');
+    resetAnswer();
 
     while (daySelector.firstChild) {
         daySelector.removeChild(daySelector.firstChild);
@@ -76,6 +109,8 @@ function displayDaysTillBirthday() {
         return;
     }
 
+    resetAnswer();
+
     var birthMonth = monthSelector.selectedIndex - 1;
     var birthDate = daySelector.options[daySelector.selectedIndex].value;
     var daysLeft = Math.round(calculateDaysTillBirthday(birthMonth, birthDate)*10)/10;
@@ -84,6 +119,7 @@ function displayDaysTillBirthday() {
     if (daysLeft == 0.0)
     {
         answer = '*** Happy Birthday! ***';
+        addRemoveBirthdayImage(true);
     }
     else if (daysLeft < 1)
     {
