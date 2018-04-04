@@ -74,7 +74,9 @@ aside #profile-pic {
 #articles article {
   border: 1px solid #cfd0d1;
   margin: 5px;
-  padding: 10px;
+  padding: 20px;
+  min-width: 300px;
+  max-width: 500px;
 }
 
 #articles article h2 {
