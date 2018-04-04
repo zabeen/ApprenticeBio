@@ -1,0 +1,15 @@
+#gif-articles {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0px;
+
+    article {
+        margin: 5px;
+        padding: 10px;
+        width: $article-square;
+        height: $article-square;
+        background-color: lightgrey;
+
+        @import 'figure';
+    }
+}
