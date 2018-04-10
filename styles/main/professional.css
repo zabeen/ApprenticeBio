@@ -12,6 +12,13 @@ a {
   color: #0c00a1;
 }
 
+a.external {
+  padding-right: 18px;
+  background-image: url("../../img/external-link.png");
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
+
 ul {
   list-style-type: square;
 }
@@ -30,7 +37,7 @@ nav a {
   font-size: 1.25em;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 600px) {
   nav {
     display: none;
   }

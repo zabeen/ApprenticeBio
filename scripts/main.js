@@ -1,4 +1,14 @@
 /*
+ *  Apply styles dynamically
+ */
+
+ // if href of <a> tag is of the current domain, then apply local class, else external
+ // Source: https://stackoverflow.com/a/2911045
+Array.from( document.querySelectorAll( 'a' ) ).forEach( a => {
+    a.classList.add( location.hostname === a.hostname || !a.hostname.length ? 'local' : 'external' );
+    });
+
+/*
  *  Birthday countdown
  */
 

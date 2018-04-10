@@ -10,6 +10,13 @@ h1, h2 {
 
 a {
     color: $a-color;
+
+    &.external {
+        padding-right: 18px;
+        background-image: url("../../img/external-link.png");
+        background-repeat: no-repeat;
+        background-position: right bottom;
+    }
 }
 
 ul {
