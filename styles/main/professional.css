@@ -30,6 +30,12 @@ nav a {
   font-size: 1.25em;
 }
 
+@media only screen and (min-width: 800px) {
+  nav {
+    display: none;
+  }
+}
+
 #page {
   display: flex;
   width: 100%;
