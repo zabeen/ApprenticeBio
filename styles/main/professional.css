@@ -101,6 +101,12 @@ aside #profile-pic {
   margin: 15px 0 0 0;
 }
 
+#articles article select {
+  font-size: 1.1em;
+  width: 150px;
+  height: 30px;
+}
+
 #articles article #answer {
   color: #1ca100;
 }
