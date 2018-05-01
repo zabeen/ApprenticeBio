@@ -1,0 +1,46 @@
+nav {
+    display: block;
+}
+
+#page {
+    flex-flow: row wrap;
+}
+
+aside, #articles {
+    flex: 1 0 100%;
+    height: 100%;
+}
+
+aside {
+    order: 2;
+}
+
+#articles {
+    order: 1;
+}
+
+@media (min-width: 800px)  {
+    nav {
+        display: none;
+    }
+    
+    page {
+        flex-flow: initial;
+    }
+
+    aside, #articles {
+        height: initial;
+    }
+
+    aside {
+        order: 1;
+        flex: 0 0 auto;
+        min-width: 270px;
+    }
+
+    #articles {
+        order: 2;
+        flex: 1 1 50%;
+    }
+}
+
