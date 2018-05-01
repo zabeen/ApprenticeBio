@@ -37,12 +37,6 @@ nav a {
   font-size: 1.25em;
 }
 
-@media only screen and (min-width: 600px) {
-  nav {
-    display: none;
-  }
-}
-
 #page {
   display: flex;
   width: 100%;
@@ -50,8 +44,6 @@ nav a {
 }
 
 aside {
-  flex-shrink: 0;
-  min-width: 270px;
   padding: 10px;
   background: #2a3b44;
   color: white;
@@ -70,7 +62,6 @@ aside #profile-pic {
 }
 
 #articles {
-  flex-grow: 1;
   display: flex;
   flex-flow: row wrap;
   margin: 15px 15px 15px 20px;
@@ -109,6 +100,48 @@ aside #profile-pic {
 
 #articles article #answer {
   color: #1ca100;
+}
+
+nav {
+  display: block;
+}
+
+#page {
+  flex-flow: row wrap;
+}
+
+aside, #articles {
+  flex: 1 0 100%;
+  height: 100%;
+}
+
+aside {
+  order: 2;
+}
+
+#articles {
+  order: 1;
+}
+
+@media (min-width: 800px) {
+  nav {
+    display: none;
+  }
+  page {
+    flex-flow: initial;
+  }
+  aside, #articles {
+    height: initial;
+  }
+  aside {
+    order: 1;
+    flex: 0 0 auto;
+    min-width: 270px;
+  }
+  #articles {
+    order: 2;
+    flex: 1 1 50%;
+  }
 }
 
 footer {
